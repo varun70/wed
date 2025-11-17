@@ -1,0 +1,4 @@
+body { margin:0; background:#000; color:#0f0; font-family:'Share Tech Mono';}
+.navbar {display:flex; justify-content:space-between; padding:20px; background:rgba(0,0,0,0.6); position:sticky; top:0;}
+.terminal {background:black; padding:20px; height:400px; overflow-y:auto; border:1px solid #0f0;}
+.title-glow {color:#0f0; font-size:32px;}

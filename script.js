@@ -1,0 +1,1 @@
+window.onload=function(){let t=document.getElementById("terminalWindow");t.innerHTML='VanarSec Terminal Loaded';};
