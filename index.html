@@ -1,28 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>VanarSec | Cyberpunk Terminal</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VanarSec — Cyberpunk Cybersecurity</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div id="cyber-grid"></div>
-<header class="navbar">
-    <div class="logo">⚡ VanarSec</div>
+  <header class="navbar">
+    <div class="logo">vanar<span>sec</span></div>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="tools.html">Tools</a>
-        <a href="blog.html">Blog</a>
+      <a href="index.html">Home</a>
+      <a href="#academy">Academy</a>
+      <a href="#labs">Labs</a>
+      <a href="blog.html">Blog</a>
+      <a href="tools.html">Tools</a>
+      <a href="#contact">Contact</a>
     </nav>
-</header>
-<section class="terminal-section">
-    <h1 class="title-glow">VanarSec Cyberpunk Terminal</h1>
-    <div id="terminalWindow" class="terminal"></div>
-</section>
-<audio id="typeSound" src="https://assets.mixkit.co/sfx/download/mixkit-typewriter-soft-click-1125.wav"></audio>
-<audio id="enterSound" src="https://assets.mixkit.co/sfx/download/mixkit-retro-arcade-casino-notification-211.wav"></audio>
-<script src="script.js"></script>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>VanarSec</h1>
+        <p class="lead">Cyberpunk — Learn Ethical Hacking with hands-on labs, tools, and a live interactive terminal.</p>
+        <div class="hero-cta">
+          <button class="cta-btn" onclick="scrollToSection('terminal')">Open Terminal</button>
+          <a class="cta-link" href="blog.html">Read Blog</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="terminal" class="section">
+      <h2>Interactive Hacker Terminal</h2>
+      <p class="muted">Type <code>help</code> to see available commands. (Safe sandbox — frontend only)</p>
+      <div id="terminalWindow" class="terminal-window" aria-live="polite"></div>
+      <div class="terminal-footer muted">Theme: <span id="currentTheme">cyber</span> — Switch: <code>theme green</code> / <code>theme red</code> / <code>theme blue</code> / <code>theme cyber</code></div>
+    </section>
+
+    <section id="academy" class="section">
+      <h2>VanarSec Academy</h2>
+      <p class="muted">Structured learning paths — beginner → advanced</p>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Networking</h3>
+          <p class="muted">TCP/IP, subnets, routing, VLANs, firewalls.</p>
+        </article>
+        <article class="card">
+          <h3>Linux</h3>
+          <p class="muted">Shell, services, logs, permissions, SSH security.</p>
+        </article>
+        <article class="card">
+          <h3>Web Hacking</h3>
+          <p class="muted">XSS, SQLi, CSRF, auth bypass, Burp Suite.</p>
+        </article>
+        <article class="card">
+          <h3>Blue Team</h3>
+          <p class="muted">SIEM, incident response, threat hunting.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="labs" class="section">
+      <h2>Hands-On Labs</h2>
+      <div class="card-grid">
+        <div class="card"><h3>Web Lab</h3><p class="muted">Practice XSS and SQLi in safe VMs.</p></div>
+        <div class="card"><h3>Nmap Lab</h3><p class="muted">Scanning & service discovery.</p></div>
+        <div class="card"><h3>WiFi Lab</h3><p class="muted">Learn WPA2 handshake capture (legal only).</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p class="muted">Email: <a href="mailto:contact@vanarsec.in">contact@vanarsec.in</a> — GitHub: <a href="https://github.com/vanarsec" target="_blank" rel="noopener">github.com/vanarsec</a></p>
+    </section>
+  </main>
+
+  <footer class="footer">© 2025 VanarSec — Learn ethically • Stay legal</footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
