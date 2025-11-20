@@ -1,60 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>VanarSec Tools</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VanarSec — Tools</title>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="navbar">
-    <div class="logo">vanar<span>sec</span></div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="blog.html">Blog</a>
-      <a href="tools.html">Tools</a>
-    </nav>
-  </header>
+<body class="theme-cyber">
+<header class="navbar">
+  <div class="logo">vanar<span>sec</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="tools.html" class="active">Tools</a>
+    <a href="blog.html">Blog</a>
+    <a href="terminal.html">Terminal</a>
+  </nav>
+</header>
 
-  <main>
-    <section class="section">
-      <h2>Tools & Cheat Sheets</h2>
-      <p class="muted">Commands & quick references for tools used in labs.</p>
+<main class="section">
+  <h1 class="title-glow">Tools & Cheat Sheets</h1>
+  <p class="muted">Interactive client-side tools for learning. All tools run in your browser — no network access.</p>
 
-      <div class="tool-grid">
-        <div class="tool-card">
-          <h3>Nmap</h3>
-          <p class="muted">Scan: <code>nmap -sC -sV target</code></p>
-        </div>
-
-        <div class="tool-card">
-          <h3>Burp Suite</h3>
-          <p class="muted">Proxy testing and web fuzzing.</p>
-        </div>
-
-        <div class="tool-card">
-          <h3>Wireshark</h3>
-          <p class="muted">Capture filters: <code>tcp.port==80</code></p>
-        </div>
-
-        <div class="tool-card">
-          <h3>Gobuster</h3>
-          <p class="muted">Dir brute: <code>gobuster dir -u https://url -w wordlist.txt</code></p>
-        </div>
-
-        <div class="tool-card">
-          <h3>John / Hashcat</h3>
-          <p class="muted">Password cracking tools (practice responsibly).</p>
-        </div>
-
-        <div class="tool-card">
-          <h3>Metasploit</h3>
-          <p class="muted">Exploit framework — lab-only use.</p>
-        </div>
+  <div class="tool-grid">
+    <div class="tool-card">
+      <h3>Base64 Encode / Decode</h3>
+      <textarea id="b64-input" placeholder="Enter text" rows="3"></textarea>
+      <div class="tool-actions">
+        <button onclick="b64encode()">Encode</button>
+        <button onclick="b64decode()">Decode</button>
       </div>
-    </section>
-  </main>
+      <pre id="b64-out" class="output"></pre>
+    </div>
 
-  <footer class="footer">© 2025 VanarSec — Tools</footer>
+    <div class="tool-card">
+      <h3>SHA-256 Hash</h3>
+      <input id="hash-input" placeholder="Enter text" />
+      <div class="tool-actions"><button onclick="sha256()">Hash</button></div>
+      <pre id="hash-out" class="output"></pre>
+    </div>
+
+    <div class="tool-card">
+      <h3>Password Strength</h3>
+      <input id="pw-input" placeholder="Enter password" />
+      <div class="tool-actions"><button onclick="pwcheck()">Check</button></div>
+      <pre id="pw-out" class="output"></pre>
+    </div>
+
+    <div class="tool-card">
+      <h3>Port Scan Simulator</h3>
+      <input id="scan-target" placeholder="target (example.com)" />
+      <div class="tool-actions"><button onclick="simulateNmapTools()">Simulate Scan</button></div>
+      <pre id="scan-out" class="output"></pre>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">© 2025 VanarSec — Tools</footer>
+<script src="script.js"></script>
 </body>
 </html>
